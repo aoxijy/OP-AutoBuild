@@ -1,4 +1,4 @@
-## Action OpenWrt IPKs
+## Action OpenWrt
 
 ------
 
@@ -39,13 +39,11 @@
 - [GitHub](https://github.com)
 - [GitHub Actions](https://github.com/features/actions)
 - [tmate](https://github.com/tmate-io/tmate)
-- [mxschmitt/action-tmate](https://github.com/mxschmitt/action-tmate)
 - [csexton/debugger-action](https://github.com/csexton/debugger-action)
 - [OpenWrt](https://github.com/openwrt/openwrt)
 - [Lean's OpenWrt](https://github.com/coolsnowwolf/lede)
 - [Cowtransfer](https://cowtransfer.com)
 - [WeTransfer](https://wetransfer.com/)
-- [Mikubill/transfer](https://github.com/Mikubill/transfer)
 
 ## 更新日志
 
