@@ -175,7 +175,7 @@ EOF
 # 第三方插件选择:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-oaf=n #应用过滤
-CONFIG_PACKAGE_luci-app-openclash=y #OpenClash客户端
+CONFIG_PACKAGE_luci-app-openclash=n #OpenClash客户端
 # CONFIG_PACKAGE_luci-app-serverchan=n #微信推送
 CONFIG_PACKAGE_luci-app-eqos=n #IP限速
 # CONFIG_PACKAGE_luci-app-control-weburl=n #网址过滤
@@ -192,7 +192,7 @@ EOF
 
 # ShadowsocksR插件:
 cat >> .config <<EOF
-CONFIG_PACKAGE_luci-app-ssr-plus=y
+CONFIG_PACKAGE_luci-app-ssr-plus=n
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_SagerNet_Core is not set
 EOF
 
@@ -217,7 +217,7 @@ cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-adbyby-plus=n #adbyby去广告
 CONFIG_PACKAGE_luci-app-webadmin=y #Web管理页面设置
 CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
-CONFIG_DEFAULT_luci-app-vlmcsd=y #KMS激活服务器
+CONFIG_DEFAULT_luci-app-vlmcsd=n #KMS激活服务器
 CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
 CONFIG_PACKAGE_luci-app-autoreboot=n #定时重启
 CONFIG_PACKAGE_luci-app-upnp=n #通用即插即用UPnP(端口自动转发)
@@ -225,8 +225,8 @@ CONFIG_PACKAGE_luci-app-arpbind=n #IP/MAC绑定
 CONFIG_PACKAGE_luci-app-accesscontrol=n #上网时间控制
 CONFIG_PACKAGE_luci-app-wol=n #网络唤醒
 CONFIG_PACKAGE_luci-app-nps=n #nps内网穿透
-CONFIG_PACKAGE_luci-app-frps=y
-CONFIG_PACKAGE_luci-app-frpc=y #Frp内网穿透
+CONFIG_PACKAGE_luci-app-frps=n
+CONFIG_PACKAGE_luci-app-frpc=n #Frp内网穿透
 CONFIG_PACKAGE_luci-app-nlbwmon=y #宽带流量监控
 CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
 CONFIG_PACKAGE_luci-app-haproxy-tcp=n #Haproxy负载均衡
