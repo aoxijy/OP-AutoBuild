@@ -57,12 +57,12 @@ uci set dhcp.lan.ra_management=''                          # DHCPv6 模式-禁�
 # uci delete network.lan.type                                # 旁路由桥接模式-禁用
 
 # 如果有用IPV6的话,可以使用以下命令创建IPV6客户端(LAN口)（去掉全部代码uci前面#号生效）
-uci set network.ipv6=interface
-uci set network.ipv6.proto='dhcpv6'
-uci set network.ipv6.ifname='@lan'
-uci set network.ipv6.reqaddress='try'
-uci set network.ipv6.reqprefix='auto'
-uci set firewall.@zone[0].network='lan ipv6'
+# uci set network.ipv6=interface
+# uci set network.ipv6.proto='dhcpv6'
+# uci set network.ipv6.ifname='@lan'
+# uci set network.ipv6.reqaddress='try'
+# uci set network.ipv6.reqprefix='auto'
+# uci set firewall.@zone[0].network='lan ipv6'
 EOF
 
 # 修改退出命令到最后
@@ -118,8 +118,8 @@ EOF
 
 # 设置固件大小:
 cat >> .config <<EOF
-CONFIG_TARGET_KERNEL_PARTSIZE=32
-CONFIG_TARGET_ROOTFS_PARTSIZE=580
+CONFIG_TARGET_KERNEL_PARTSIZE=16
+CONFIG_TARGET_ROOTFS_PARTSIZE=280
 EOF
 
 # 固件压缩:
@@ -142,7 +142,7 @@ EOF
 cat >> .config <<EOF
 CONFIG_QCOW2_IMAGES=n
 CONFIG_VHDX_IMAGES=n
-CONFIG_VMDK_IMAGES=y
+CONFIG_VMDK_IMAGES=n
 CONFIG_TARGET_IMAGES_PAD=y
 EOF
 
@@ -182,8 +182,8 @@ CONFIG_PACKAGE_luci-app-eqos=n #IP限速
 # CONFIG_PACKAGE_luci-app-smartdns=n #smartdns服务器
 # CONFIG_PACKAGE_luci-app-adguardhome=n #ADguardhome
 CONFIG_PACKAGE_luci-app-poweroff=y #关机（增加关机功能）
-# CONFIG_PACKAGE_luci-app-argon-config=y #argon主题设置
-CONFIG_PACKAGE_luci-theme-atmaterial_new=y #atmaterial 三合一主题
+# CONFIG_PACKAGE_luci-app-argon-config=n #argon主题设置
+CONFIG_PACKAGE_luci-theme-atmaterial_new=n #atmaterial 三合一主题
 CONFIG_PACKAGE_luci-theme-neobird=y #Neobird 主题
 CONFIG_PACKAGE_luci-app-rebootschedule=n #定时重启系统，网络
 # CONFIG_PACKAGE_luci-app-ddnsto=n #小宝开发的DDNS.to内网穿透
@@ -215,7 +215,7 @@ EOF
 # 常用LuCI插件:
 cat >> .config <<EOF
 CONFIG_PACKAGE_luci-app-adbyby-plus=n #adbyby去广告
-CONFIG_PACKAGE_luci-app-webadmin=y #Web管理页面设置
+CONFIG_PACKAGE_luci-app-webadmin=n #Web管理页面设置
 CONFIG_PACKAGE_luci-app-ddns=y #DDNS服务
 CONFIG_DEFAULT_luci-app-vlmcsd=n #KMS激活服务器
 CONFIG_PACKAGE_luci-app-filetransfer=y #系统-文件传输
@@ -230,7 +230,7 @@ CONFIG_PACKAGE_luci-app-frpc=n #Frp内网穿透
 CONFIG_PACKAGE_luci-app-nlbwmon=y #宽带流量监控
 CONFIG_PACKAGE_luci-app-wrtbwmon=y #实时流量监测
 CONFIG_PACKAGE_luci-app-haproxy-tcp=n #Haproxy负载均衡
-CONFIG_PACKAGE_luci-app-diskman=y #磁盘管理磁盘信息
+CONFIG_PACKAGE_luci-app-diskman=n #磁盘管理磁盘信息
 CONFIG_PACKAGE_luci-app-transmission=n #Transmission离线下载
 CONFIG_PACKAGE_luci-app-qbittorrent=n #qBittorrent离线下载
 CONFIG_PACKAGE_luci-app-amule=n #电驴离线下载
@@ -244,9 +244,9 @@ CONFIG_PACKAGE_luci-app-usb-printer=n #USB打印机
 CONFIG_PACKAGE_luci-app-sqm=n #SQM智能队列管理
 CONFIG_PACKAGE_luci-app-jd-dailybonus=n #京东签到服务
 CONFIG_PACKAGE_luci-app-uugamebooster=n #UU游戏加速器
-CONFIG_PACKAGE_luci-app-dockerman=y #Docker管理
-CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=y #Docker管理
-CONFIG_PACKAGE_luci-app-ttyd=y #ttyd
+CONFIG_PACKAGE_luci-app-dockerman=n #Docker管理
+CONFIG_PACKAGE_luci-i18n-dockerman-zh-cn=n #Docker管理
+CONFIG_PACKAGE_luci-app-ttyd=n #ttyd
 CONFIG_PACKAGE_luci-app-wireguard=n #wireguard端
 #
 # VPN相关插件(禁用):
