@@ -25,7 +25,7 @@ rm -rf package/lean/autocore
 NET="package/base-files/files/bin/config_generate"
 ZZZ="package/lean/default-settings/files/zzz-default-settings"
 #
-sed -i 's#192.168.1.1#10.0.0.1#g' $NET                                                    # 定制默认IP
+sed -i 's#192.168.1.1#192.168.9.2#g' $NET                                                    # 定制默认IP
 sed -i 's#OpenWrt#GanQuanRu Co#g' $NET                                                     # 修改默认名称为OpenWrt-X86
 sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ                                                    # 取消系统默认密码
 sed -i "s/OpenWrt /GanQuanRu Co build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ              # 增加自己个性名称
